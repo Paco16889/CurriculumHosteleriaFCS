@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV – Francisco Cobo | Hostelería</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <style>
+    @page { size: A4; margin: 0; }
+
+    @media print {
+      body { background: none; padding: 0; margin: 0; }
+      .page { width: 210mm; height: 297mm; box-shadow: none; }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --col-left: #1a1a2e;
+      --col-left-accent: #e2b96a;
+      --col-right: #fafaf7;
+      --text-light: #d4d0c8;
+      --text-dark: #2c2c2c;
+      --text-mid: #555;
+      --border: #e0ddd5;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: #e8e5df;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 30px 15px;
+    }
+
+    .page {
+      width: 794px;
+      height: 1123px;
+      overflow: hidden;
+      background: var(--col-right);
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+    }
+
+    /* ── COLUMNA IZQUIERDA ── */
+    .left {
+      background: var(--col-left);
+      color: var(--text-light);
+      padding: 28px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .photo-placeholder {
+      width: 95px;
+      height: 95px;
+      border-radius: 50%;
+      border: 3px solid var(--col-left-accent);
+      background: #2d2d45;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      color: #888;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .left-section-title {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--col-left-accent);
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid rgba(226,185,106,0.3);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 11.5px;
+      font-weight: 300;
+      color: var(--text-light);
+      margin-bottom: 7px;
+      line-height: 1.4;
+    }
+    .contact-icon {
+      font-size: 13px;
+      margin-top: 1px;
+      flex-shrink: 0;
+      color: var(--col-left-accent);
+    }
+
+    .skill-item {
+      font-size: 10px;
+      font-weight: 300;
+      color: var(--text-light);
+      margin-bottom: 3px;
+      padding-left: 10px;
+      position: relative;
+    }
+    .skill-item::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--col-left-accent);
+      font-size: 9px;
+      top: 2px;
+    }
+
+    .lang-name {
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1px;
+    }
+    .lang-level {
+      font-size: 10px;
+      font-weight: 300;
+      color: var(--text-light);
+      line-height: 1.3;
+    }
+
+    .info-item {
+      font-size: 10px;
+      font-weight: 300;
+      color: var(--text-light);
+      margin-bottom: 3px;
+      padding-left: 10px;
+      position: relative;
+    }
+    .info-item::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--col-left-accent);
+      font-size: 9px;
+      top: 2px;
+    }
+
+    /* ── COLUMNA DERECHA ── */
+    .right {
+      padding: 28px 28px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .name-block {}
+    .name-block h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: var(--text-dark);
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+    .name-block .subtitle {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--col-left-accent);
+      font-weight: 700;
+    }
+    .name-divider {
+      width: 50px;
+      height: 3px;
+      background: var(--col-left-accent);
+      margin-top: 10px;
+    }
+
+    /* Sección derecha */
+    .section {}
+    .section-title {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--col-left);
+      margin-bottom: 7px;
+      padding-bottom: 4px;
+      border-bottom: 2px solid var(--col-left-accent);
+    }
+
+    .sobre-mi p {
+      font-size: 10.5px;
+      color: var(--text-mid);
+      line-height: 1.55;
+      font-weight: 300;
+    }
+
+    /* Experiencia */
+    .exp-block {
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .exp-block:last-child { margin-bottom: 0; border-bottom: none; padding-bottom: 0; }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+    .exp-role {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+    .exp-years {
+      font-size: 11px;
+      color: var(--col-left-accent);
+      font-weight: 700;
+      white-space: nowrap;
+      margin-left: 8px;
+      flex-shrink: 0;
+    }
+    .exp-company {
+      font-size: 10.5px;
+      color: var(--col-left);
+      font-weight: 700;
+      margin-bottom: 1px;
+    }
+    .exp-date {
+      font-size: 9.5px;
+      color: #999;
+      font-style: italic;
+      margin-bottom: 3px;
+    }
+    .exp-desc {
+      font-size: 10px;
+      color: var(--text-mid);
+      line-height: 1.5;
+      font-weight: 300;
+    }
+
+    .exp-sub {
+      margin-top: 5px;
+      padding-left: 8px;
+      border-left: 2px solid var(--border);
+    }
+    .exp-sub-role {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 1px;
+    }
+    .exp-sub-detail {
+      font-size: 10px;
+      color: var(--text-mid);
+      font-weight: 300;
+    }
+
+    .exp-group-title {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--col-left-accent);
+      margin: 14px 0 8px 0;
+    }
+
+    /* Formación */
+    .form-block {
+      margin-bottom: 10px;
+    }
+    .form-title {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 1px;
+    }
+    .form-where {
+      font-size: 11px;
+      color: var(--text-mid);
+      font-weight: 300;
+    }
+
+    /* Tags habilidades hostelería */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+    .tag {
+      background: #d6cfc4;
+      color: #2c2c2c;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      padding: 4px 10px;
+      border-radius: 12px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ══ IZQUIERDA ══ -->
+  <aside class="left">
+
+    <!-- Foto -->
+    <div class="photo-placeholder">FOTO<br/>AQUÍ</div>
+
+    <!-- Contacto -->
+    <div>
+      <div class="left-section-title">Contacto</div>
+      <div class="contact-item">
+        <span class="contact-icon">📞</span>
+        <span>649-080-336</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon">✉️</span>
+        <span>francisco.cobsan@gmail.com</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon">📍</span>
+        <span>Marbella, Málaga</span>
+      </div>
+    </div>
+
+    <!-- Habilidades -->
+    <div>
+      <div class="left-section-title">Habilidades</div>
+      <div class="skill-item">Atención al cliente</div>
+      <div class="skill-item">Trabajo en equipo</div>
+      <div class="skill-item">Gestión de equipos</div>
+      <div class="skill-item">Resolución de conflictos</div>
+      <div class="skill-item">Espíritu comercial</div>
+      <div class="skill-item">Organización de sala</div>
+      <div class="skill-item">Gestión de inventarios</div>
+      <div class="skill-item">Rapidez y eficiencia</div>
+    </div>
+
+    <!-- Idiomas -->
+    <div>
+      <div class="left-section-title">Idiomas</div>
+      <div style="margin-bottom:8px;">
+        <div class="lang-name">Español</div>
+        <div class="lang-level">Nativo</div>
+      </div>
+      <div>
+        <div class="lang-name">Inglés</div>
+        <div class="lang-level">Nivel alto — estudios y experiencia profesional</div>
+      </div>
+    </div>
+
+    <!-- Más info -->
+    <div>
+      <div class="left-section-title">Más información</div>
+      <div class="info-item">Carné de conducir</div>
+      <div class="info-item">Vehículo propio</div>
+      <div class="info-item">Disponibilidad total</div>
+    </div>
+
+    <!-- Intereses -->
+    <div>
+      <div class="left-section-title">Intereses</div>
+      <div class="skill-item">Nuevas tecnologías</div>
+      <div class="skill-item">Gastronomía y cocina</div>
+      <div class="skill-item">Tendencias en hostelería</div>
+      <div class="skill-item">Emprendimiento</div>
+    </div>
+
+  </aside>
+
+  <!-- ══ DERECHA ══ -->
+  <main class="right">
+
+    <!-- Nombre -->
+    <div class="name-block">
+      <h1>Francisco Cobo</h1>
+      <div class="subtitle">Profesional de Hostelería · Sala &amp; Gestión</div>
+      <div class="name-divider"></div>
+    </div>
+
+    <!-- Sobre mí -->
+    <div class="section sobre-mi">
+      <div class="section-title">Sobre mí</div>
+      <p>
+        Profesional con más de <strong>10 años de experiencia en hostelería</strong>, con trayectoria en establecimientos de alto nivel en la Costa del Sol. 
+        Me caracterizo por mi capacidad para trabajar bajo presión, la atención al detalle y el trato excelente al cliente. 
+        Tengo habilidades de liderazgo, gestión de equipos y organización de sala, con disponibilidad total para nuevos retos.
+      </p>
+    </div>
+
+    <!-- Experiencia laboral -->
+    <div class="section">
+      <div class="section-title">Experiencia Laboral</div>
+
+      <!-- Trattoria L'impronta -->
+      <div class="exp-block">
+        <div class="exp-company">Trattoria L'impronta</div>
+        <div class="exp-sub" style="margin-top:6px;">
+          <div class="exp-sub-role">Camarero</div>
+          <div class="exp-date">Ago. 2021 – Ene. 2022 &nbsp;·&nbsp; Jun. – Sep. 2025</div>
+          <div class="exp-desc">Servicio en sala en restaurante italiano, atención al cliente y gestión de mesas en temporada alta.</div>
+        </div>
+      </div>
+
+      <!-- Hotel La Chancla -->
+      <div class="exp-block">
+        <div class="exp-company">Hotel La Chancla</div>
+        <div class="exp-sub" style="margin-top:6px;">
+          <div class="exp-sub-role">Camarero</div>
+          <div class="exp-date">Mar. 2023 – Ene. 2024 &nbsp;·&nbsp; Mar. – Jun. 2025</div>
+          <div class="exp-desc">Servicio de restaurante en hotel, gestión de sala, atención a clientes de alojamiento y eventos.</div>
+        </div>
+      </div>
+
+      <!-- Autónomo -->
+      <div class="exp-block">
+        <div class="exp-company">Negocio propio — Fabricación y venta online de tablas de surf</div>
+        <div class="exp-sub" style="margin-top:6px;">
+          <div class="exp-sub-role">Autónomo</div>
+          <div class="exp-date">Feb. 2023 – Sep. 2024</div>
+          <div class="exp-desc">Gestión integral: contabilidad, publicidad, logística y atención al cliente. Habilidades comerciales y de gestión empresarial.</div>
+        </div>
+      </div>
+
+      <!-- Sol Beach -->
+      <div class="exp-block">
+        <div class="exp-company">Restaurante Sol Beach Guadalmina</div>
+        <div class="exp-sub" style="margin-top:6px;">
+          <div class="exp-sub-role">Camarero</div>
+          <div class="exp-date">Temporadas 2017, 2018 y 2021</div>
+          <div class="exp-desc">Servicio en sala en restaurante de playa durante temporada alta, coordinación con cocina y equipo de sala. En 2019 y 2020 acudía también como extra a realizar labores de espetero.</div>
+        </div>
+      </div>
+
+      <!-- Hotel Guadalmina -->
+      <div class="exp-block">
+        <div class="exp-company">Hotel Guadalmina ****</div>
+        <div class="exp-sub" style="margin-top:6px;">
+          <div class="exp-sub-role">Camarero</div>
+          <div class="exp-date">Temporadas 2019 y 2020</div>
+          <div class="exp-desc">Servicio de restaurante y eventos en hotel de cuatro estrellas. Atención al público, mediación y resolución de incidencias, gestión de inventarios y organización de equipos.</div>
+        </div>
+        <div class="exp-sub" style="margin-top:8px;">
+          <div class="exp-sub-role">Espetero</div>
+          <div class="exp-date">Temporada 2022</div>
+          <div class="exp-desc">Elaboración y servicio de espetos en el restaurante del hotel, atención al cliente en terraza y gestión del puesto.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Formación -->
+    <div class="section">
+      <div class="section-title">Formación</div>
+      <div class="form-block">
+        <div class="form-title">Ciclo Formativo de Grado Superior</div>
+        <div class="form-title" style="font-weight:400; font-size:12px; margin-top:2px;">Desarrollo de Aplicaciones Multiplataforma — Bilingüe</div>
+        <div class="form-where">CPIFP Alan Turing &nbsp;·&nbsp; 2026</div>
+      </div>
+    </div>
+
+    <!-- Competencias clave hostelería -->
+    <div class="section">
+      <div class="section-title">Competencias clave</div>
+      <div class="tags">
+        <span class="tag">Servicio de sala</span>
+        <span class="tag">Atención al cliente</span>
+        <span class="tag">Gestión de mesas</span>
+        <span class="tag">Cobro y caja</span>
+        <span class="tag">Gestión de reservas</span>
+        <span class="tag">Trabajo en equipo</span>
+        <span class="tag">Eventos y celebraciones</span>
+        <span class="tag">Inglés</span>
+        <span class="tag">Trabajo bajo presión</span>
+      </div>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>
