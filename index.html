@@ -56,8 +56,8 @@
     }
 
     .photo-placeholder {
-      width: 95px;
-      height: 95px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
       border: 3px solid var(--col-left-accent);
       background: #2d2d45;
@@ -69,6 +69,14 @@
       color: #888;
       text-align: center;
       line-height: 1.4;
+      overflow: hidden;
+    }
+
+    .imagen{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
     }
 
     .left-section-title {
@@ -155,7 +163,7 @@
       gap: 14px;
     }
 
-    .name-block {}
+    
     .name-block h1 {
       font-family: 'Playfair Display', serif;
       font-size: 28px;
@@ -178,7 +186,7 @@
     }
 
     /* Sección derecha */
-    .section {}
+    
     .section-title {
       font-size: 9px;
       font-weight: 700;
@@ -311,7 +319,9 @@
   <aside class="left">
 
     <!-- Foto -->
-    <div class="photo-placeholder">FOTO<br/>AQUÍ</div>
+    <div class="photo-placeholder">
+        <img class="imagen" src="foto.png" alt="Foto">
+    </div>
 
     <!-- Contacto -->
     <div>
