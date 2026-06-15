@@ -1,0 +1,96 @@
+/* Estilos solo para impresión / exportación PDF — no afectan la vista en pantalla */
+
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  html,
+  body {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: #fff !important;
+    display: block !important;
+  }
+
+  .mobile-header,
+  .mobile-menu {
+    display: none !important;
+  }
+
+  .page {
+    display: grid !important;
+    grid-template-columns: 220px 1fr !important;
+    width: 210mm !important;
+    height: 297mm !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    box-shadow: none !important;
+    background: var(--col-right) !important;
+    position: relative !important;
+  }
+
+  .left {
+    display: flex !important;
+    visibility: visible !important;
+    background: var(--col-left) !important;
+  }
+
+  .right {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 28px 28px 24px 24px !important;
+  }
+
+  .right .name-block {
+    display: block !important;
+  }
+
+  .section-collapsible {
+    border: none !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .section-collapsible > .section-content {
+    display: block !important;
+    visibility: visible !important;
+    padding: 0 !important;
+  }
+
+  .section-collapsible summary.section-title {
+    pointer-events: none;
+    cursor: default;
+    list-style: none;
+    padding: 0;
+    padding-bottom: 4px;
+    margin-bottom: 7px;
+    background: transparent !important;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--col-left);
+    border-bottom: 2px solid var(--col-left-accent);
+  }
+
+  .section-collapsible summary.section-title::-webkit-details-marker {
+    display: none;
+  }
+
+  .contact-link {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+}

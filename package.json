@@ -1,0 +1,11 @@
+{
+  "name": "curriculum-hosteleria-fcs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "pdf": "node generar-pdf.mjs"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^24.2.0"
+  }
+}

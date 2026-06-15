@@ -6,8 +6,29 @@
   <title>CV – Francisco Cobo | Hostelería</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="pdf.css" media="print"/>
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+  </symbol>
+  <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/>
+  </symbol>
+  <symbol id="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+  </symbol>
+  <symbol id="icon-skills" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+  </symbol>
+  <symbol id="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+  </symbol>
+  <symbol id="icon-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>
+  </symbol>
+</svg>
     <div class="mobile-header">
     <div class="photo-placeholder">
         <img class="imagen" src="foto.png" alt="Foto">
@@ -33,15 +54,15 @@
     <div>
       <div class="left-section-title">Contacto</div>
       <div class="contact-item">
-        <span class="contact-icon">📞</span>
-        <span>649-080-336</span>
+        <span class="contact-icon"><svg><use href="#icon-phone"/></svg></span>
+        <a class="contact-link" href="tel:+34649080336">649-080-336</a>
       </div>
       <div class="contact-item">
-        <span class="contact-icon">✉️</span>
-        <span>francisco.cobsan@gmail.com</span>
+        <span class="contact-icon"><svg><use href="#icon-mail"/></svg></span>
+        <a class="contact-link" href="mailto:francisco.cobsan@gmail.com">francisco.cobsan@gmail.com</a>
       </div>
       <div class="contact-item">
-        <span class="contact-icon">📍</span>
+        <span class="contact-icon"><svg><use href="#icon-location"/></svg></span>
         <span>Marbella, Málaga</span>
       </div>
     </div>
@@ -106,7 +127,7 @@
       <summary class="section-title">Sobre mí</summary>
       <div class="section-content">
       <p>
-        Profesional con más de <strong>10 años de experiencia en hostelería</strong>, con trayectoria en establecimientos de alto nivel en la Costa del Sol. 
+        Profesional con más de <span class="highlight-exp">10 años de experiencia en hostelería</span>, con trayectoria en establecimientos de alto nivel en la Costa del Sol. 
         Me caracterizo por mi capacidad para trabajar bajo presión, la atención al detalle y el trato excelente al cliente. 
         Tengo habilidades de liderazgo, gestión de equipos y organización de sala, con disponibilidad total para nuevos retos.
       </p>
@@ -130,11 +151,11 @@
 
       <!-- Hotel La Chancla -->
       <div class="exp-block">
-        <div class="exp-company">Hotel La Chancla</div>
+        <div class="exp-company">Hotel La Chancla ***</div>
         <div class="exp-sub" style="margin-top:6px;">
           <div class="exp-sub-role">Camarero</div>
           <div class="exp-date">Mar. 2023 – Ene. 2024 &nbsp;·&nbsp; Mar. – Jun. 2025</div>
-          <div class="exp-desc">Servicio de restaurante en hotel, gestión de sala, atención a clientes de alojamiento y eventos.</div>
+          <div class="exp-desc">Servicio de restaurante en hotel de tres estrellas, gestión de sala, atención a clientes de alojamiento y eventos.</div>
         </div>
       </div>
 
@@ -183,7 +204,7 @@
       <div class="form-block">
         <div class="form-title">Ciclo Formativo de Grado Superior</div>
         <div class="form-title" style="font-weight:400; font-size:12px; margin-top:2px;">Desarrollo de Aplicaciones Multiplataforma — Bilingüe</div>
-        <div class="form-where">CPIFP Alan Turing &nbsp;·&nbsp; 2026</div>
+        <div class="form-where">CPIFP Alan Turing &nbsp;·&nbsp; Titulado 2026</div>
       </div>
       </div>
     </details>
@@ -192,17 +213,17 @@
     <details class="section section-collapsible" open>
       <summary class="section-title">Competencias clave</summary>
       <div class="section-content">
-      <div class="tags">
-        <span class="tag">Servicio de sala</span>
-        <span class="tag">Atención al cliente</span>
-        <span class="tag">Gestión de mesas</span>
-        <span class="tag">Cobro y caja</span>
-        <span class="tag">Gestión de reservas</span>
-        <span class="tag">Trabajo en equipo</span>
-        <span class="tag">Eventos y celebraciones</span>
-        <span class="tag">Inglés</span>
-        <span class="tag">Trabajo bajo presión</span>
-      </div>
+      <ul class="comp-list">
+        <li>Servicio de sala</li>
+        <li>Atención al cliente</li>
+        <li>Gestión de mesas</li>
+        <li>Cobro y caja</li>
+        <li>Gestión de reservas</li>
+        <li>Trabajo en equipo</li>
+        <li>Eventos y celebraciones</li>
+        <li>Inglés</li>
+        <li>Trabajo bajo presión</li>
+      </ul>
       </div>
     </details>
 
@@ -210,26 +231,26 @@
   <div class="mobile-menu">
 
     <details>
-        <summary>📞 Contacto</summary>
+        <summary><span class="menu-icon"><svg><use href="#icon-phone"/></svg></span>Contacto</summary>
 
         <div class="contact-item">
-            <span class="contact-icon">📞</span>
-            <span>649-080-336</span>
+            <span class="contact-icon"><svg><use href="#icon-phone"/></svg></span>
+            <a class="contact-link" href="tel:+34649080336">649-080-336</a>
         </div>
 
         <div class="contact-item">
-            <span class="contact-icon">✉️</span>
-            <span>francisco.cobsan@gmail.com</span>
+            <span class="contact-icon"><svg><use href="#icon-mail"/></svg></span>
+            <a class="contact-link" href="mailto:francisco.cobsan@gmail.com">francisco.cobsan@gmail.com</a>
         </div>
 
         <div class="contact-item">
-            <span class="contact-icon">📍</span>
+            <span class="contact-icon"><svg><use href="#icon-location"/></svg></span>
             <span>Marbella, Málaga</span>
         </div>
     </details>
 
     <details>
-        <summary>💪 Habilidades</summary>
+        <summary><span class="menu-icon"><svg><use href="#icon-skills"/></svg></span>Habilidades</summary>
 
         <div class="skill-item">Atención al cliente</div>
         <div class="skill-item">Trabajo en equipo</div>
@@ -242,7 +263,7 @@
     </details>
 
     <details>
-        <summary>🌍 Idiomas</summary>
+        <summary><span class="menu-icon"><svg><use href="#icon-globe"/></svg></span>Idiomas</summary>
 
         <div class="lang-name">Español</div>
         <div class="lang-level">Nativo</div>
@@ -256,7 +277,7 @@
     </details>
 
     <details>
-        <summary>ℹ️ Más información</summary>
+        <summary><span class="menu-icon"><svg><use href="#icon-info"/></svg></span>Más información</summary>
 
         <div class="info-item">Carné de conducir</div>
         <div class="info-item">Vehículo propio</div>
