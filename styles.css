@@ -379,6 +379,30 @@ body {
   top: 3px;
 }
 
+/* Botón descarga PDF (enlace al fichero del repo) */
+.btn-download-pdf {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1000;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: var(--col-left);
+  background: var(--col-left-accent);
+  border-radius: 24px;
+  padding: 10px 18px;
+  box-shadow: 0 4px 14px rgba(26, 26, 46, 0.2);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-download-pdf:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(26, 26, 46, 0.25);
+}
+
 .mobile-header,
 .mobile-menu{
     display:none;
@@ -578,11 +602,11 @@ body {
   }
 
   .sobre-mi .highlight-exp {
-    display: inline;
-    background: rgba(226, 185, 106, 0.22);
-    padding: 2px 7px;
-    border-radius: 4px;
-    border-bottom: 2px solid var(--col-left-accent);
+    font-weight: 700;
+    color: inherit;
+    background: none;
+    padding: 0;
+    border: none;
   }
 
   .exp-desc,
@@ -628,6 +652,13 @@ body {
   .comp-list li::before {
     font-size: 11px;
     top: 4px;
+  }
+
+  .btn-download-pdf {
+    right: 12px;
+    bottom: 12px;
+    font-size: 13px;
+    padding: 11px 16px;
   }
 
 }

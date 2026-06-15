@@ -35,7 +35,7 @@ CurriculumHosteleriaFCS/
 ├── generar-pdf.mjs     # Exportador PDF (Puppeteer + Chrome/Edge)
 ├── generar-pdf.ps1     # Wrapper PowerShell
 ├── package.json        # Dependencia puppeteer-core (generación PDF)
-├── CV-Francisco-Cobo.pdf  # PDF generado (opcional en repo)
+├── CV-Francisco-Cobo.pdf  # PDF oficial (actualizar con generar-pdf.ps1)
 └── .gitignore          # Excluye node_modules/
 ```
 
@@ -80,7 +80,8 @@ CurriculumHosteleriaFCS/
 - Competencias en lista (no etiquetas) para mejor legibilidad en todos los dispositivos.
 - Destacado tipográfico de experiencia (`highlight-exp`).
 - Enlaces de contacto clicables.
-- Pipeline local de exportación a PDF sin modificar el HTML de producción.
+- Botón flotante **Descargar PDF** — enlace directo a `CV-Francisco-Cobo.pdf` del repositorio.
+- Pipeline local de exportación a PDF (`generar-pdf.ps1`) para actualizar ese fichero manualmente.
 
 ---
 
@@ -120,6 +121,19 @@ npm run pdf
 
 > **Nota:** Los cambios en HTML/CSS se reflejan en el PDF al volver a ejecutar el script. No hace falta intervención manual adicional.
 
+### Actualizar el PDF descargable
+
+Tras modificar el CV, regenera y sube el PDF al repo:
+
+```powershell
+.\generar-pdf.ps1
+git add CV-Francisco-Cobo.pdf
+git commit -m "Actualizar PDF del CV"
+git push
+```
+
+El botón **Descargar PDF** de la web apunta a ese fichero. Misma calidad que generas en local con Puppeteer.
+
 ---
 
 ## Despliegue (GitHub Pages)
@@ -128,7 +142,7 @@ npm run pdf
 2. En el repositorio: **Settings → Pages → Source:** `Deploy from a branch` → `main` / `/ (root)`.
 3. La web se actualiza en 1–2 minutos tras cada push.
 
-Archivos necesarios en la raíz del repo: `index.html`, `styles.css`, `script.js`, `pdf.css`, `foto.png`.
+Archivos necesarios en la raíz del repo: `index.html`, `styles.css`, `script.js`, `pdf.css`, `foto.png`, `CV-Francisco-Cobo.pdf`.
 
 Los scripts de PDF (`generar-pdf.*`, `package.json`) son opcionales en el remoto; sirven para desarrollo local.
 
