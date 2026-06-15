@@ -23,7 +23,8 @@
   }
 
   .mobile-header,
-  .mobile-menu {
+  .mobile-menu,
+  .btn-download-pdf {
     display: none !important;
   }
 
@@ -45,12 +46,15 @@
     display: flex !important;
     visibility: visible !important;
     background: var(--col-left) !important;
+    padding: 32px 20px !important;
+    gap: 18px !important;
   }
 
   .right {
     display: flex !important;
     flex-direction: column !important;
-    padding: 28px 28px 24px 24px !important;
+    padding: 30px 30px 26px 28px !important;
+    gap: 17px !important;
   }
 
   .right .name-block {
@@ -75,8 +79,8 @@
     cursor: default;
     list-style: none;
     padding: 0;
-    padding-bottom: 4px;
-    margin-bottom: 7px;
+    padding-bottom: 5px;
+    margin-bottom: 9px;
     background: transparent !important;
     font-size: 10px;
     letter-spacing: 2px;

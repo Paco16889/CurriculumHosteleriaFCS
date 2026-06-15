@@ -60,7 +60,8 @@ await page.addStyleTag({
       display: block !important;
     }
     .mobile-header,
-    .mobile-menu {
+    .mobile-menu,
+    .btn-download-pdf {
       display: none !important;
     }
     .page {

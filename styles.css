@@ -34,10 +34,10 @@ body {
 .left {
   background: var(--col-left);
   color: var(--text-light);
-  padding: 28px 18px;
+  padding: 32px 20px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
 }
 
 .photo-placeholder {
@@ -71,8 +71,8 @@ body {
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: var(--col-left-accent);
-  margin-bottom: 10px;
-  padding-bottom: 5px;
+  margin-bottom: 11px;
+  padding-bottom: 6px;
   border-bottom: 1px solid rgba(226,185,106,0.3);
 }
 
@@ -83,8 +83,8 @@ body {
   font-size: 12.5px;
   font-weight: 300;
   color: var(--text-light);
-  margin-bottom: 7px;
-  line-height: 1.4;
+  margin-bottom: 8px;
+  line-height: 1.45;
 }
 
 .contact-link {
@@ -132,7 +132,7 @@ body {
   font-size: 11px;
   font-weight: 300;
   color: var(--text-light);
-  margin-bottom: 3px;
+  margin-bottom: 4px;
   padding-left: 10px;
   position: relative;
 }
@@ -162,7 +162,7 @@ body {
   font-size: 11px;
   font-weight: 300;
   color: var(--text-light);
-  margin-bottom: 3px;
+  margin-bottom: 4px;
   padding-left: 10px;
   position: relative;
 }
@@ -177,10 +177,10 @@ body {
 
 /* ── COLUMNA DERECHA ── */
 .right {
-  padding: 28px 28px 24px 24px;
+  padding: 30px 30px 26px 28px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 17px;
 }
 
 
@@ -202,7 +202,7 @@ body {
   width: 50px;
   height: 3px;
   background: var(--col-left-accent);
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 /* Sección derecha */
@@ -213,8 +213,8 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--col-left);
-  margin-bottom: 7px;
-  padding-bottom: 4px;
+  margin-bottom: 9px;
+  padding-bottom: 5px;
   border-bottom: 2px solid var(--col-left-accent);
 }
 
@@ -254,7 +254,7 @@ body {
 .sobre-mi p {
   font-size: 12.5px;
   color: var(--text-mid);
-  line-height: 1.55;
+  line-height: 1.6;
   font-weight: 300;
 }
 
@@ -266,8 +266,8 @@ body {
 
 /* Experiencia */
 .exp-block {
-  margin-bottom: 8px;
-  padding-bottom: 8px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
   border-bottom: 1px solid var(--border);
 }
 .exp-block:last-child { margin-bottom: 0; border-bottom: none; padding-bottom: 0; }
@@ -301,12 +301,12 @@ body {
   font-size: 10.5px;
   color: #999;
   font-style: italic;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 .exp-desc {
   font-size: 11px;
   color: var(--text-mid);
-  line-height: 1.5;
+  line-height: 1.55;
   font-weight: 300;
 }
 
@@ -338,7 +338,7 @@ body {
 
 /* Formación */
 .form-block {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 .form-title {
   font-size: 12.5px;
@@ -357,8 +357,8 @@ body {
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5px 20px;
-  margin-top: 2px;
+  gap: 6px 22px;
+  margin-top: 3px;
 }
 
 .comp-list li {
@@ -381,26 +381,35 @@ body {
 
 /* Botón descarga PDF (enlace al fichero del repo) */
 .btn-download-pdf {
-  position: fixed;
-  right: 16px;
-  bottom: 16px;
-  z-index: 1000;
   font-family: 'Lato', sans-serif;
-  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.5px;
   text-decoration: none;
   color: var(--col-left);
   background: var(--col-left-accent);
-  border-radius: 24px;
-  padding: 10px 18px;
-  box-shadow: 0 4px 14px rgba(26, 26, 46, 0.2);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
 .btn-download-pdf:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(26, 26, 46, 0.25);
+  background: #e8c87a;
+}
+
+/* PC: integrado al final de la barra izquierda */
+.btn-download-pdf--desktop {
+  display: block;
+  width: 100%;
+  margin-top: auto;
+  padding: 9px 10px;
+  font-size: 10px;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Móvil: flotante (oculto en PC) */
+.btn-download-pdf--mobile {
+  display: none;
 }
 
 .mobile-header,
@@ -471,6 +480,15 @@ body {
   .mobile-subtitle{
     font-size:13px;
     color:var(--col-left-accent);
+  }
+
+  .mobile-tagline {
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 10px;
+    line-height: 1.4;
+    max-width: 260px;
   }
 
   /* ─────────────────────────────
@@ -654,11 +672,20 @@ body {
     top: 4px;
   }
 
-  .btn-download-pdf {
+  .btn-download-pdf--mobile {
+    display: block;
+    position: fixed;
     right: 12px;
     bottom: 12px;
+    z-index: 1000;
     font-size: 13px;
     padding: 11px 16px;
+    border-radius: 24px;
+    box-shadow: 0 4px 14px rgba(26, 26, 46, 0.2);
+  }
+
+  .btn-download-pdf--mobile:hover {
+    box-shadow: 0 6px 18px rgba(26, 26, 46, 0.25);
   }
 
 }
